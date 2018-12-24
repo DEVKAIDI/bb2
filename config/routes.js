@@ -38,5 +38,7 @@ module.exports.routes = {
   //  ║║║║╚═╗║
   //  ╩ ╩╩╚═╝╚═╝
 
+  'GET  /momo':'momoController.hola',
+  'POST /momo':'momoController.create'
 
 };
