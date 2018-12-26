@@ -7,6 +7,8 @@
 
 module.exports = {
 
+  tableName:"momos",
+
   attributes: {
       name : {type:'string'}
   },

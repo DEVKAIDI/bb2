@@ -33,7 +33,9 @@ var sails;
 var rc;
 try {
   sails = require('sails');
+  var bodyParser = require('body-parser')
   rc = require('sails/accessible/rc');
+  sails.use(bodyParser.urlencoded({ extended: false }))
 } catch (err) {
   console.error('Encountered an error when attempting to require(\'sails\'):');
   console.error(err.stack);
