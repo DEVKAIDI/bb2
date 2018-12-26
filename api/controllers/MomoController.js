@@ -5,15 +5,13 @@
  * @help        :: See https://sailsjs.com/docs/concepts/actions
  */
 
+
 module.exports = {
     
-    create : (req,res)=>{
-        Momo.create({name:req.param("name")}).then( function(userCreated){
-                 sails.log.info(userCreated);
-                  res.ok(userCreated.name);
-       }, function(Error){
-        res.serverError({err:'Unable to create user'});
-       });
+    create : async (req,res)=>{
+
+      let userCreated = await Momo.create({name:req.param("name"), dateDeNaissance:new Date()}).fetch();
+      return res.json(userCreated);
     },
 
     hola:(req,res)=>{

@@ -10,7 +10,8 @@ module.exports = {
   tableName:"momos",
 
   attributes: {
-      name : {type:'string'}
+      name : {type:'string'}, 
+      dateDeNaissance : {type: 'string', columnType: 'date'}
   },
 
 };
